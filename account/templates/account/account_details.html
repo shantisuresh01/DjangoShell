@@ -1,0 +1,41 @@
+{% extends "utils/base_simple.html" %}
+{% load bootstrap_toolkit %}
+{% load staticfiles %}
+
+{% load i18n %}
+
+{% block page-title %}{{ block.super }} | Profile{% endblock %}
+
+{% block wrapper-specific %}profile view{% endblock %}
+
+{% block general-style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/setup.css' %}">
+{% endblock general-style %}
+
+{% block main-content %}
+    <div class="title-container">
+        <div class="title" >
+            <h2>{% trans 'My Profile' %}</h2>
+        </div>
+    </div>
+    <div class="form-container">
+        <form action="/account/update/">
+            <div class="control-group">
+                <label class="control-label">Email</label>
+                <p class="outputs">{{ user.email }}</p>
+            </div>
+            <div class="control-group">
+				<label class="control-label">Phone Number</label>
+                <p class="outputs">{{ user.sms_number }}</p>
+            </div>
+            <div class="control-group last">
+				<label class="control-label">Text message reminders</label>
+				<p class="outputs">{%if user.is_subscribed %} Subscribed {% else %} Not subscribed {% endif %}</p>
+            </div>
+    		<div class="button-block">
+				<a class="btn btn-default back" href="{% url 'home_page' %}">Back</a>
+                <button class="btn btn-primary update" type="submit" name="button">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock main-content %}

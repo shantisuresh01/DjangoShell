@@ -1,0 +1,10 @@
+{% extends "utils/base.html" %}
+
+{% block content %}
+	<h2> User deactivated </h2>
+		<div>
+			<button class="btn btn-secondary" onclick="window.location.href='{% url 'dashboard:landing' %}'">
+				Back to Dashboard
+			</button>
+		</div>
+{% endblock content %}

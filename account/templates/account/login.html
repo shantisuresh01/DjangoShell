@@ -1,0 +1,33 @@
+{% extends "utils/base.html" %}
+{% load staticfiles %}
+
+{% block page-title %}{{ block.super }} | Login{% endblock page-title%}
+
+{% block content %}
+
+	<div class="content_box">
+			<div class="welcome-nav-logo"><img src="/static/img/wallner-logo-vertical_1X.png" width='' alt='Connected Cancer Care logo'></div>
+		<h2>Sign In to Your Account</h2>
+		<form id="sign-in-form" class="form" action="" method="post" accept-charset="utf-8">
+			{% csrf_token %}
+			<table>
+				<tr>
+				    <td>{{ form.username.label_tag }}</td>
+				    <td>{{ form.username }}</td>
+				</tr>
+				<tr>
+				    <td>{{ form.password.label_tag }}</td>
+				    <td>{{ form.password }}</td>
+				</tr>
+			</table>
+
+	        <div class="button-block">
+	            <button class="btn btn-primary nav-button" type="submit">Sign In</button>
+	        <div class="trouble-signing-in">
+	            <p>Trouble signing in?<br />
+	            <a href="{% url 'account:reset_password' %}">Reset your password here</a></p>
+	        </div>
+	        </div>
+		</form>		
+	</div>	
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "utils/base.html" %}
+{% load staticfiles %}
+
+{% block page-title %}Login | WBCS{% endblock page-title%}
+
+{% block content %}
+	
+	<div class="content_box">
+		
+		<div class="welcome-nav-logo"><img src="/static/img/wallner-logo-vertical_1X.png" width='' alt='Connected Cancer Care logo'></div>
+
+		<h2>Welcome!</h2>
+		<p>To get started, please enter the <strong>6-digit access code</strong> found in your welcome letter.</p>
+		<form class="form" action="" method="post" accept-charset="utf-8">
+             {% csrf_token %}
+             <div class="form-group">
+                 {{ form.as_p }}
+             </div>  
+             <div class="button-block">
+                 <button type="submit" class="btn nav-button pull-right">
+                     Submit &rarr;
+                 </button>
+ 			</div>
+         </form>
+			
+	</div>	
+{% endblock content %}

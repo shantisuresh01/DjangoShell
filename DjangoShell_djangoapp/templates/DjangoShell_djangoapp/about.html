@@ -1,0 +1,25 @@
+{% extends "utils/base.html" %}
+{% load staticfiles %}
+
+{% block page-title %}{{ block.super }}About The DjangoShell Program
+{% endblock page-title %}
+{% block messages %}
+{% endblock messages %}
+
+{% block content %}
+<div class="content_box">
+	<div class="welcome-nav-logo"><img src="{% static 'img/wallner-logo-vertical_1X.png' %}" width='' alt='DjangoShell logo'></div>
+
+		<h3>Thank you for your interest in the DjangoShell program.</h3>
+<strong>DjangoShell </strong>is a fully functional Django program aimed at providing a portal with the fundamental features of login, session-security (timeouts).
+
+When you log into the website, you can access documentation about:
+<ul>
+  <li>Using the program</li>
+<li>What resources you may customize</li>
+</ul>I hope you will find this information useful
+<h4>Contact us</h4>
+Please send us an email with your comments at <a href='mail&#116;o&#58;inf%6F&#64;%63on%6Ee&#37;&#54;3t%65%64c&#97;n%63%65rc&#37;&#54;1r%65%2&#69;%6Fr&#103;'>i&#110;fo&#64;c&#111;nnectedca&#110;cercar&#101;&#46;or&#103;</a>
+  
+
+</div>{% endblock content %}

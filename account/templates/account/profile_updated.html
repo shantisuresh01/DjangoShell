@@ -1,0 +1,10 @@
+{% extends "utils/base_simple.html" %}
+
+{% block body-content %}
+	</br>
+	<h2> Profile has been updated</h2>
+	<!-- <input type="button" value="Close" id="id_close_button" onclick="self.close()" >  -->
+	<button class="btn nav-button" onclick="window.location.href='{% url 'logout' %}'">
+		Logout
+	</button>
+{% endblock body-content %}
