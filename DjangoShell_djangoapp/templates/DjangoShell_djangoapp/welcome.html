@@ -1,9 +1,8 @@
 {% extends "utils/base.html" %} 
-{% load staticfiles %} 
+{% load static %}
 {% block page-title %}{{ block.super }}Welcome | {% endblock page-title %} 
 {% block content %}
 <div class="welcome">
-    <div class="welcome-nav-logo"><img src="{% static 'img/wallner-logo-vertical_1X.png' %}" width='' alt='DjangoShell logo'></div>
     <div class="flex-wrapper">
         <div id="aboutus">
             <h3>Welcome to DjangoShell!</h3>

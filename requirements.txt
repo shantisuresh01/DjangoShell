@@ -3,5 +3,5 @@ django-session-security
 cffi
 requests[security]
 django-registration
-mysqlclient
+pymysql
 pytz
