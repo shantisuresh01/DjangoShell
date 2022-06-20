@@ -18,7 +18,7 @@ from django.urls import path, re_path, include
 from DjangoShell_djangoapp.views import AboutTheProgramView, whereto
 from django.contrib.auth.views import logout_then_login
 from django.views.generic.base import RedirectView
-from DjangoShell_djangoapp.views import LandingView, whereto
+from DjangoShell_djangoapp.views import LandingView, whereto, BravoView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +30,7 @@ urlpatterns = [
     re_path(r'session_security/', include('session_security.urls')),
     re_path(r'^$', RedirectView.as_view(url='welcome/', permanent=False)),
     re_path(r'^welcome/$(?i)', LandingView.as_view(), {}, name="landing_page"),
+    re_path(r'^bravo/$(?i)', BravoView.as_view(), {}, name="bravo_page"),
 
 
 ]

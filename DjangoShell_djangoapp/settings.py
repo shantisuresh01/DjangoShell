@@ -167,3 +167,7 @@ LOGIN_REDIRECT_URL = '/whereto'
 # Django support for adding missing Primary key fields on models:
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# During development:
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+
